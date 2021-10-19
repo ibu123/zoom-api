@@ -1,0 +1,257 @@
+{
+	"info": {
+		"_postman_id": "fdc4836f-1770-4890-9627-d2d4866ab637",
+		"name": "Jur Assignment API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/converstions",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "Discuss for web design",
+							"type": "text"
+						},
+						{
+							"key": "participants[0]",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "participants[1]",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/zoom-meetings/api/conversations",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"zoom-meetings",
+						"api",
+						"conversations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/conversations",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/zoom-meetings/api/conversations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"zoom-meetings",
+						"api",
+						"conversations"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/conversations/:id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost/zoom-meetings/api/conversations/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"zoom-meetings",
+						"api",
+						"conversations",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/conversations/:id/messages",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "sender_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "conversation_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "Schedule for 10:09 20/10/21",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "Meeting",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/zoom-meetings/api/conversation/1/messages",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"zoom-meetings",
+						"api",
+						"conversation",
+						"1",
+						"messages"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/conversations/:id/messages",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost/zoom-meetings/api/conversation/1/messages",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"zoom-meetings",
+						"api",
+						"conversation",
+						"1",
+						"messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "conversation/{conversation}/message/{message}",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept-Charset",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/zoom-meetings/api/conversation/1/messages/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"zoom-meetings",
+						"api",
+						"conversation",
+						"1",
+						"messages",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
