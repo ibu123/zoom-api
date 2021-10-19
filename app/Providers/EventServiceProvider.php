@@ -29,6 +29,6 @@ class EventServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-
+        ConversationMessage::observe(ConversationMessageObserver::class);
     }
 }
