@@ -17,3 +17,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::apiResource('conversations',ConversationController::class)->only([
+    'index', 'store', 'show'
+]);
+
+Route::apiResource('conversation.messages',ConversationMessageController::class)->only([
+    'index', 'store', 'show'
+]);
