@@ -12,8 +12,7 @@ cp .env-example .env
 | ZOOM_API_KEY | zoom secret key |
 
 ```sh
-docker build
-docker composer up -d
+docker compose up -d
 ```
 
 ### steps to setup - in localhost
