@@ -1,0 +1,51 @@
+version: '3.7'
+
+services:
+    app:
+        build:
+            context: .
+            dockerfile: ./docker/Dockerfile
+        image: 'jur-assignment/laravel'
+        container_name: jur-assignment-laravel-app
+        ports:
+            - "80:80"
+        volumes:
+            - ./:/var/www/html
+        networks:
+            - jur-assignment
+        depends_on:
+            - mysql
+    mysql:
+        image: 'mariadb:latest'
+        container_name: jur-assignment-laravel-db
+        restart: always
+        ports:
+            - "3306:3306"
+        environment:
+            MYSQL_DATABASE: ${DB_DATABASE}
+            MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+            MYSQL_PASSWORD: ${DB_PASSWORD}
+            MYSQL_USER: ${DB_USERNAME}
+            MYSQL_ALLOW_EMPTY_PASSWORD: 'YES'
+        networks:
+            - jur-assignment
+
+    myphpadmin:
+        image: phpmyadmin/phpmyadmin:latest
+        container_name: MyPhpAdmin
+        restart: always
+        depends_on:
+            - mysql
+        environment:
+            PMA_HOST: mysql
+            PMA_PORT: 3306
+            PMA_ARBITRARY: 1
+        restart: always
+        ports:
+            - 8086:80
+        networks:
+            - jur-assignment
+
+networks:
+    jur-assignment:
+        driver: bridge

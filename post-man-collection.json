@@ -37,12 +37,15 @@
 					]
 				},
 				"url": {
-					"raw": "localhost/zoom-meetings/api/conversations",
+					"raw": "http://127.0.0.1/api/conversations",
+					"protocol": "http",
 					"host": [
-						"localhost"
+						"127",
+						"0",
+						"0",
+						"1"
 					],
 					"path": [
-						"zoom-meetings",
 						"api",
 						"conversations"
 					]
@@ -62,13 +65,15 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost/zoom-meetings/api/conversations",
+					"raw": "http://127.0.0.1/api/conversations",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"127",
+						"0",
+						"0",
+						"1"
 					],
 					"path": [
-						"zoom-meetings",
 						"api",
 						"conversations"
 					],
@@ -102,13 +107,15 @@
 					"urlencoded": []
 				},
 				"url": {
-					"raw": "http://localhost/zoom-meetings/api/conversations/1",
+					"raw": "http://127.0.0.1/api/conversations/1",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"127",
+						"0",
+						"0",
+						"1"
 					],
 					"path": [
-						"zoom-meetings",
 						"api",
 						"conversations",
 						"1"
@@ -139,11 +146,12 @@
 						{
 							"key": "conversation_id",
 							"value": "1",
-							"type": "text"
+							"type": "text",
+							"disabled": true
 						},
 						{
 							"key": "content",
-							"value": "Schedule for 10:09 20/10/21",
+							"value": "Cancel 01:00 30/12/21",
 							"type": "text"
 						},
 						{
@@ -154,12 +162,15 @@
 					]
 				},
 				"url": {
-					"raw": "localhost/zoom-meetings/api/conversation/1/messages",
+					"raw": "http://127.0.0.1/api/conversation/1/messages",
+					"protocol": "http",
 					"host": [
-						"localhost"
+						"127",
+						"0",
+						"0",
+						"1"
 					],
 					"path": [
-						"zoom-meetings",
 						"api",
 						"conversation",
 						"1",
@@ -203,12 +214,15 @@
 					}
 				],
 				"url": {
-					"raw": "localhost/zoom-meetings/api/conversation/1/messages",
+					"raw": "http://127.0.0.1/api/conversation/1/messages",
+					"protocol": "http",
 					"host": [
-						"localhost"
+						"127",
+						"0",
+						"0",
+						"1"
 					],
 					"path": [
-						"zoom-meetings",
 						"api",
 						"conversation",
 						"1",
@@ -236,18 +250,20 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost/zoom-meetings/api/conversation/1/messages/2",
+					"raw": "http://127.0.0.1/api/conversation/1/messages/1",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"127",
+						"0",
+						"0",
+						"1"
 					],
 					"path": [
-						"zoom-meetings",
 						"api",
 						"conversation",
 						"1",
 						"messages",
-						"2"
+						"1"
 					]
 				}
 			},
