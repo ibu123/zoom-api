@@ -10,10 +10,16 @@ cp .env-example .env
 | QUEUE_CONNECTION | database|
 | ZOOM_API_KEY | zoom api key |
 | ZOOM_API_KEY | zoom secret key |
+| DB_HOST | mysql
 
+
+afert setting up enviornment
 ```sh
 docker compose up -d
 ```
+
+> Open 127.0.0.1 - If you see composer auto load file missing error - please wait for some time as composer currently installing dpendency inside docker container
+
 
 ### steps to setup - in localhost
 

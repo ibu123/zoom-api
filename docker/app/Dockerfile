@@ -24,8 +24,11 @@ RUN apt update && apt install -y \
     && docker-php-source delete
 
 COPY ./docker/vhost.conf /etc/apache2/sites-available/000-default.conf
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-
+#COPY --from=composer /usr/bin/composer /usr/bin/composer
+#RUN composer install
 RUN chown -R www-data:www-data /var/www/html && a2enmod rewrite
+
 COPY ./docker/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+#CMD ["sh", "-c", "composer install && /usr/bin/supervisord"]
 CMD ["/usr/bin/supervisord"]
+
