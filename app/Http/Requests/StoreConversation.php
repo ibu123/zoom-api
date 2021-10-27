@@ -17,7 +17,7 @@ class StoreConversation extends FormRequest
     {
         return [
             'title' => 'required',
-            'participants' => 'required',
+            'participants' => 'array|required|min:2|max:2',
             'participants.*' => 'exists:contacts,id'
         ];
     }

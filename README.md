@@ -49,3 +49,12 @@ php artisan queue:work
 ```
 > please set header Accept - application/json to get proper validation message.
 > you can also download **postman-collection.json** file to test api in postman
+
+### How To Test
+- create testing.sqlite file inside database folder
+- on terminal write 
+```
+docker exec -it jur-assignment-laravel-app \bin\bash
+cd \var\www\html
+./vendor/bin/phpunit
+
